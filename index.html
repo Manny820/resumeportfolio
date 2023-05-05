@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with JohnDoe landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Emanuel Miranda Website</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + emiranda main styles -->
+	<link rel="stylesheet" href="assets/css/emiranda.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light" href="https://www.linkedin.com/in/emanuel-miranda-428898207"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://github.com/Manny820"><i class="ti-github" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="https://www.instagram.com/mannyyy_98/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+            </ul>  
+            <div class="header-content">
+                <h4 class="header-subtitle" >Hello, I am</h4>
+                <h1 class="header-title">Emanuel Miranda</h1>
+                <h6 class="header-mono" >Student | Developer</h6>
+                <img id="resume" src="assets/images/Resume.jpg" alt="resume" style="display: none;">
+                <button id="print" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const printBtn = document.getElementById('print');
+                        const resume = document.getElementById('resume').cloneNode();
+                        resume.style.display = 'block';
+                        printBtn.addEventListener('click', function () {
+                            const iframe = document.createElement('iframe');
+                            iframe.style.height = 0;
+                            iframe.style.visibility = 'hidden';
+                            iframe.style.width = 0;
+                            iframe.setAttribute('srcdoc','');                            
+                            document.body.appendChild(iframe);
+                                iframe.contentWindow.addEventListener('afterprint', function () {
+                                iframe.parentNode.removeChild(iframe);
+                            });
+                            iframe.addEventListener('load', function () {
+                                resume.style.maxWidth = '100%';
+                                const body = iframe.contentDocument.body;
+                                body.style.textAlign = 'center';
+                                body.appendChild(resume);
+                                resume.addEventListener('load', function() {
+                                    iframe.contentWindow.print(resume);
+                                });
+                            });
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#courses" class="nav-link">Courses</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav brand">
+                    <img src="assets/images/avatar.jpeg" alt="" class="brand-img">
+                    <li class="brand-txt">
+                        <h5 class="brand-title">Emanuel Miranda</h5>
+                        <div class="brand-subtitle">Student | Developer</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item last-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- About Me section -->
+    <div class="container">
+        <div id="about" class="row about-section">
+            <div style="left:+50px" class="col-lg-4 about-card"> 
+                <h3 class="font-weight-light">Who am I ?</h3>
+                <span class="line mb-5"></span>
+                <h5 class="mb-3">A Student / Developer Located In Fremont</h5>
+                <p class="mt-20">Hi! Here is a little bit about myself so that you may become familiar with who I am. I am Mexican-American and I was born in Stanford, 
+                                California. I am first generation and the only one of my family to pursue College and achieve a Bachelor's Degree. My experiences have 
+                                taught me to be resourceful and quick to adapt. My skills are versatile and am excited to integrate them into future projects!</p>
+            </div>
+            <div style="left:+50px" class="col-lg-4 about-card">
+                <h3 class="font-weight-light">Contact Info</h3>
+                <span class="line mb-5"></span>
+                <ul class="mt40 info list-unstyled">
+                    <li><span>Email</span> : manuelmiranda820@outlook.com</li>
+                    <li><span>Phone</span> : (650) 847-0969</li>
+                    <li><span>Address</span> : 4001 Nicolet Ave </li>
+                    <li><span>City</span> : Fremont, CA</li>
+                </ul>
+                <ul class="social-icons pt-3"> 
+                    <li class="social-item"><a class="social-link" href="https://www.linkedin.com/in/emanuel-miranda-428898207"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="https://github.com/Manny820"><i class="ti-github" aria-hidden="true"></i></a></li>
+                    <li class="social-item"><a class="social-link" href="https://www.instagram.com/mannyyy_98/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                </ul>  
+                <a href="assets/images/Resume.jpg" class="btn btn-outline-danger" download="Resume"><i class="icon-down-circled2"></i>Download My Resume</a>
+            </div>
+            <div style="left:+50px" class="col-lg-4 about-card">
+                <h3 class="font-weight-light">My Focus</h3>
+                <span class="line mb-5"></span>
+                <div class="row">
+                    <div style="right:+15px" class="col-1 text-danger pt-1"><i class="ti-mobile icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>  Application Development</h6>
+                        <p class="subtitle">Skilled in designing and programming high-performing, user-friendly applications for various platforms</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="right:+15px" class="col-1 text-danger pt-1"><i class="ti-desktop icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6> Web Development</h6>
+                        <p class="subtitle">Experience with website development through multiple programming languages and frameworks</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div style="right:+15px" class="col-1 text-danger pt-1"><i class="ti-game icon-lg"></i></div>
+                    <div class="col-10 ml-auto mr-3">
+                        <h6>  Game Design</h6>
+                        <p class="subtitle">Created mobile games with a focus on fun, challenging, and entertaining experiences</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of about me section -->
+
+
+    <!-- References section -->
+    <h4 style="font-size:30px;" class="title text-danger"><center>References</h4>
+        <section class="references-background">
+                <div class="wrapper">
+                    <div class="text-box"> 
+                        <img src="assets/images/headshot.jpg" alt="headshot example">
+                        <h2> Chris Swinney </h2>
+                        <p>Lieutenant <br> <em>(111) 111-1111</em></p>
+                    </div>
+                    <div class="text-box"> 
+                        <img src="assets/images/headshot.jpg" alt="headshot example">
+                        <h2> Cinthya Ibarra </h2>
+                        <p>Project Coordinator <br> <em>(510) 566-6426</em></p>
+                    </div>
+                    <div class="text-box"> 
+                        <img src="assets/images/headshot.jpg" alt="headshot example">
+                        <h2> Abelino Miranda </h2>
+                        <p>Quality Engineer Supervisor <br> <em>(209) 919-0612</em></p>
+                    </div>
+                </div>
+        </section> 
+    <!-- End of References section -->
+
+
+    <!--Resume Section-->
+    <section class="section" id="resume">
+        <div class="container">
+            <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
+            <div class="row">
+                <div style="left:+50px" class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Employment</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">Miranda Catering</h6>
+                            <p><strong>Co-Owner (2016 - Present)</strong></P>
+                            <P class="subtitle">This is a family-owned business that my parents created and that I now help manage and run. I am in charge of managing the business, customer satisfaction, social media exposure, and head of major company/party catering events. </P>
+                            <hr>
+                            <h6 class="title text-danger">Sherriff's Activities League</h6>
+                            <P><strong>Volunteer (2020-2022)</strong></P>
+                            <P class="subtitle">This is a non-profit organization that focuses on building a bond between San Mateo County deputies and the communities they serve. My partner is a program coordinator in charge of providing free programming and community events such as family movie nights in local parks, informative SAL posts for children, educational outdoor hikes, etc. I have volunteered at all of these events</P>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-6 col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="mt-2">
+                                <h4>Education</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="title text-danger">CSU East Bay</h6>
+                            <P><strong>B.S. Computer Science (2021 - 2023)</strong> </P>
+                            <P class="subtitle">California State University, East Bay in Hayward, CA is where I finished my B.S. degree in Computer Science. 
+                                                I graduated in May 2023 and learned most of skills through my coursework. </P>
+                            <hr>
+                            <h6 class="title text-danger">San Joaquin Delta College</h6>
+                            <P><strong>A.S. Computer Science (2017-2021)<br> A.S. Mathematics (2019-2021)</strong></P>
+                            <P class="subtitle">San Joaquin Delta College in Stockton, CA is where I found my passion for Computer Science and Mathematics
+                                                and also where I got my A.S. of each respectively.</P>
+                            <hr>
+                            <h6 class="title text-danger">Lathrop High School</h6>
+                            <P><strong>Class of 2016</strong></P>
+                            <P class="subtitle">Lathrop High School located in Lathrop, CA is where I received my High School Diploma.
+                                                I also attended a special program for my senior year known as Be.Tech which pushed me pursue STEM in college.
+                            </P>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-lg-4">
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Skills</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                           <h6>HTML</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 87%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>CSS</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 83%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Java</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>JavaScript</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>C++</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Python</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                       <div class="card-header">
+                            <div class="pull-left">
+                                <h4 class="mt-2">Languages</h4>
+                                <span class="line"></span>  
+                            </div>
+                        </div>
+                        <div class="card-body pb-2">
+                           <h6>English</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Spanish</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of resume section -->
+
+
+    <!-- Icons section -->
+    <section class="section bg-dark text-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="row ">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">300+</h1>
+                            <p class="text-light mb-1">Hours Worked</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">10+</h1>
+                            <p class="text-light mb-1">Projects Finished</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">-100</h1>
+                            <p class="text-light mb-1">Hours Slept</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="row">
+                        <div class="col-5 text-right text-light border-right py-3">
+                            <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
+                        </div>
+                        <div class="col-7 text-left py-3">
+                            <h1 class="text-danger font-weight-bold font40">500+</h1>
+                            <p class="text-light mb-1">Coffees Consumed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of icons section -->
+
+
+    <!-- My Courses section -->
+    <section class="section" id="courses">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Courses</h2>
+            <div class="row">
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-settings text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Software Engineering</h5>
+                            <P class="subtitle">This course taught me how the software engineering process would function by working with classmates to create UML diagrams, project schedules, software requirement documents, application demos, j-unit testing, coding, and presenting our program to a client. I gained understanding of the software development life cycle and hands on experience with team projects.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-mobile text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Mobile Programming</h5>
+                            <P class="subtitle">This course taught me how to approach application development such as how to manage the system implementation process, how mobile application development is affected/constrained by existing software, techniques for writing quality code, techniques for testing code, understanding the role of proper documentation, and also understanding/designing/managing implementation support functions.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-desktop text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Website Development</h5>
+                            <P class="subtitle">This course showed me the process of designing, building, and maintaining a website, including various elements such as web content, graphics, and programming. The process often involved collaboration between students and also individual work which gave me the understanding to create this website from the ground up. I gained knowledge within HTML, CSS, JavaScript, and PHP to create and manage these websites.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-panel text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Analysis of Algorithms</h5>
+                            <P class="subtitle">This course helped me understand algorithmic design methodology, searching/sorting algorithms, string matching, heaps, priority queues, doubly linked and circularly linked lists, trees and balancing, and graph algorithms.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-harddrives text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Computer Architecture</h5>
+                            <P class="subtitle">This course taught me logical design of digital computers, boolean algebra, combinational and sequential circuits, computer arithmetic, integrated circuits, and control processors.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-layout-slider text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Advanced C++ and Java</h5>
+                            <P class="subtitle">In these courses, I learned the basics of both languages such as data types, variables, classes, methods, pointers, overloading and library packages and also the complex concepts such as inheritance, polymorphism, encapsulation, exception handling, binary trees, etc. </P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-dashboard text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Operating Systems</h5>
+                            <P class="subtitle">This course taught me the basic concepts and architecture of modern operating systems such as process management, memory management, file systems, and I/O systems, as well as how to implement operating system components. I gained hands-on experience by analyzing system behavior and implementing operating system components.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-layout-grid2-thumb text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Automata and Computation</h5>
+                            <P class="subtitle">This course helped me understand formal models of computation, languages, deterministic/non-deterministic finite automata, regular expressions, pushdown automata, context-free languages, and Turing machines.</P>
+                        </div>
+                    </div>
+                </div>
+                <div style="left:+50px" class="col-md-4 col-sm-6">
+                    <div class="card mb-5">
+                       <div class="card-header has-icon">
+                            <i class="ti-thought text-danger" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <h5 class="mb-3 card-title text-dark">Artificial Intelligence</h5>
+                            <P class="subtitle">This course taught me the fundamental concepts, algorithms, and techniques used in AI. I learned about machine learning, natural language processing, computer vision, and robotics, and gained hands-on experience by implementing and training machine learning models.</P>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of my courses section -->
+
+
+    <!-- Certificates section -->
+    <h4 style="font-size:30px;" class="title text-danger"><center>Certificates & Licenses</h4>
+    <section class="section bg-dark py-5">
+        <div class="container text-center">
+            <img src="assets/images/badge_1.png" alt="Diversity Scholar Certification">
+            <img src="assets/images/badge_2.png" alt="Digital Tech Certification">
+            <img src="assets/images/badge_3.png" alt="Critical Thinking Skills Certification">
+            <img src="assets/images/badge_4.png" alt="Oral Communication Skills Certification">
+            <img src="assets/images/badge_5.png" alt="Quantative Reasoning Skills Certification">
+            <img src="assets/images/badge_6.png" alt="Dean's List Certification">
+        </div>
+    </section> 
+    <!-- End of Certificates section -->
+
+
+    <!-- Projects Section -->
+    <section class="section bg-custom-gray" id="projects">
+        <div class="container">
+            <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Projects</h2>
+            
+
+            <div class="projects">
+                <div class="project-name0">
+                    <h4>Two Player Game</h4>
+                    <span class="line"></span>  
+                </div>
+                <div class="slide-container0 active">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Main Menu</h3>
+                            <p> This is a Two Player Game that I designed and programmed in Android Studio 
+                                for my Mobile Programming course. This game involves 2 players to be able 
+                                to play against each other on a single device with individual controls and 
+                                attempt to blow each other up using the stationary bomb locations.
+                                <br> <br>Click to see my Source code! 
+                            </p>
+                                <a href="https://github.com/Manny820/Two-Player-Game" class="btn btn-outline-danger">SRC Code</a>
+
+                        </div>
+
+                        <div class="video-wrapper">
+                            <video width="100%" height="100%" playsinline autoplay muted loop poster="menu.jpg">
+                              <source src="assets/videos/menu.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container0">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Starting Battle</h3>
+                            <p> Once the START button is clicked, both players are sent to the ARENA 
+                                and they can begin their battle. Each player is distinguished by their 
+                                primary color (RED or BLUE) and each have their own controls, platform,
+                                bombs, and healthbar. 
+                            </p>
+                        </div>
+                        <div class="video-wrapper">
+                            <video width="100%" height="100%" playsinline autoplay muted loop poster="battle.jpg">
+                              <source src="assets/videos/battle.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container0">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Movement</h3>
+                            <p> There are only two directions a player can move which is LEFT or RIGHT.
+                                Both controls can be pressed simultaneously so RED can be mirroring BLUE 
+                                while BLUE attempts to reach a bomb location and vice versa.
+                            </p>
+                        </div>
+                        <div class="video-wrapper">
+                            <video width="100%" height="100%" playsinline autoplay muted loop poster="movement.jpg">
+                              <source src="assets/videos/movement.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container0">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Bomb Damage</h3>
+                            <p> Objective of the game is to catch each other within the stationary 
+                                bomb locations to deal damage. Here we can see an example of each player 
+                                doing so. Each bomb causes damage on mirror platform and deals 1/3 damage 
+                                to the player's healthbar.
+                            </p>
+                        </div>
+                        <div class="video-wrapper">
+                            <video width="100%" height="100%" playsinline autoplay muted loop poster="damage.jpg">
+                              <source src="assets/videos/exploding_bombs.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container0">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Game Over</h3>
+                            <p> Once a player has reached the end of their healthbar then GAME OVER.
+                                The score is recorded and then both players are sent to the GAME OVER 
+                                screen where they can REMATCH, see SCORES, or return to MAIN MENU.
+                            </p>
+                        </div>
+                        <div class="video-wrapper">
+                            <video width="100%" height="100%" playsinline autoplay muted loop poster="gameover.jpg">
+                              <source src="assets/videos/game_over.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container0">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Scoreboard</h3>
+                            <p> A list of previous game battles is recorded within the SCOREBOARD 
+                                activity so that players can see which player won which battle. They
+                                also have the option to reset the SCOREBOARD so that they can start
+                                fresh and begin another record. 
+                            </p>
+                        </div>
+                        <div class="video-wrapper">
+                            <video width="100%" height="100%" playsinline autoplay muted loop poster="scoreboard.jpg">
+                              <source src="assets/videos/scoreboard.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="prev0" onclick="prev0()"> ◄ </div>
+                <div id="next0" onclick="next0()"> ► </div>
+                <script>
+                    let slides0 = document.querySelectorAll('.slide-container0');
+                    let index0 = 0;
+                    function next0(){
+                        slides0[index0].classList.remove('active');
+                        index0 = (index0 + 1) % slides0.length;
+                        slides0[index0].classList.add('active');
+                    }
+                    function prev0(){
+                        slides0[index0].classList.remove('active');
+                        index0 = (index0 - 1 + slides0.length) % slides0.length;
+                        slides0[index0].classList.add('active');
+                    }
+                </script>  
+            </div>  
+
+            
+            
+            <div class="projects">
+                <div class="project-name">
+                    <h4>Expense Tracking App</h4>
+                    <span class="line"></span>  
+                </div>
+                <div class="slide-container active">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Home Page</h3>
+                            <p> This is an Expense Tracking Application that I designed and programmed
+                                that allows a user to input information for transactions. The app then 
+                                creates a list on this Home Page to display info of each transaction and 
+                                also shows the total of all positive and negative transactions. There are 
+                                also two buttons in the Action Bar that send user to Categories (LEFT) or 
+                                to Add a Transaction (Right)
+                                <br> <br>Click to see my Source code! 
+                            </p>
+                                <a href="https://github.com/Manny820/Expense-Tracking-App" class="btn btn-outline-danger">SRC Code</a>
+
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide1.png" alt="Home Page">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Transaction Summary</h3>
+                            <p> Each transaction can also be clicked to display even more information
+                                of that transaction such as notes. There are also two buttons that
+                                allow a user to be able to edit this transaction or delete it entirely.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide2.png" alt="Transaction Summary">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Transaction Deletion</h3>
+                            <p> This is an example of what happens when a user wants to delete a 
+                                transaction. A pop-up notification appears to ask whether they are 
+                                sure about completely deleting it off of their list.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide3.png" alt="Transaction Deletion">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Categories</h3>
+                            <p> They are also all categorized into individual lists according to 
+                                which category the user put them in. There are a total of 9 categories
+                                that hold their specified lists and the app dynamically adds each 
+                                transaction to their category along with the Home Page. Buttons in 
+                                Action Bar allow user to go to Home Page (LEFT) or to Add a Transaction (Right)
+
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide4.png" alt="Categories">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Positive Transactions</h3>
+                            <p> There are 9 categories of transactions but only 2 states a transaction
+                                can have which is positive or negative. These are positive transactions 
+                                and can be found when clicking the INCOME category. This allows a user 
+                                to easily see each source of income and also be able to click any within
+                                the list to get even more information on desired transaction. 
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide5.png" alt="Positive Transactions">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Negative Transactions</h3>
+                            <p> This is a list of negative transactions and we are looking at the 
+                                ENTERTAINMENT category as our example. The red or green color of the 
+                                total allows a user to easily distinguish whether a transaction is 
+                                positive or negative. Every category should contain negative transactions 
+                                excluding the INCOME category.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide6.png" alt="Negative Transactions">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Adding a Transaction</h3>
+                            <p> This is the UI for adding a transaction into the user's list of 
+                                transactions. There are 5 attributes that a transaction can have 
+                                and the image is determined by which category is chosen for new 
+                                transaction. Once a user is finished, they click SAVE and it is 
+                                integrated. The 2 buttons in the Action Bar also allow a user to go 
+                                to Home Page (LEFT) or go to the Categories (RIGHT)
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide7.png" alt="Add Transaction">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Example</h3>
+                            <p> Here is what a user would see when adding a transaction into their 
+                                list. The category button however, displays a drop-down menu for 
+                                all types of categories available. This easy to understand UI allows 
+                                a user to effortlessly integrate new transactions and allow the app 
+                                to handle the rest!
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project1_slide8.png" alt="Example">
+                        </div>
+                    </div>
+                </div>
+                <div id="prev" onclick="prev()"> ◄ </div>
+                <div id="next" onclick="next()"> ► </div>
+                <script>
+                    let slides = document.querySelectorAll('.slide-container');
+                    let index = 0;
+                    function next(){
+                        slides[index].classList.remove('active');
+                        index = (index + 1) % slides.length;
+                        slides[index].classList.add('active');
+                    }
+                    function prev(){
+                        slides[index].classList.remove('active');
+                        index = (index - 1 + slides.length) % slides.length;
+                        slides[index].classList.add('active');
+                    }
+                </script>  
+            </div>  
+
+
+
+            <div class="projects">
+                <div class="project-name2">
+                    <h4>Communications App</h4>
+                    <span class="line"></span>  
+                </div>
+                <div class="slide-container2 active">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Login Page</h3>
+                            <p> This is a Communications Application that I helped design and program 
+                                in collaboration with 3 other members during our Software Engineering 
+                                final. This app allows Employees to communicate with each other through 
+                                virtual servers that our team created. This is the Login Page.
+                                <br> <br>Click to see our Source code! 
+
+                            </p>
+                            <a href="https://github.com/Manny820/Software-Engineering-Final" class="btn btn-outline-danger">SRC Code</a>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide1.png" alt="Login Page">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>User Chats</h3>
+                            <p> This is the UI design once an Employee logs into their account.
+                                They will see their existing coversations along with messages 
+                                received when the Employee was offline. Here we can see a conversation
+                                between two users who are online at the same time.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide2.png" alt="User Chats">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Storing Employees</h3>
+                            <p> Employee has 4 attributes which are name, password, status, and role.
+                                Status is used to find if Employee is online or offline. Role determines
+                                whether an Employee is an Admin or not. Each Employee is also stored within 
+                                an ArrayList with all other Employees.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_info1.png" alt="Storing Employees">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Group Chats</h3>
+                            <p> Our app also allows for a user to create group chats of multiple Employees
+                                in one conversation. This conversation appears in Employees UI when they 
+                                receive the first message and then are able to reply as needed.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide3.png" alt="Group Chats">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Creating New Chats</h3>
+                            <p> When creating a new chat, a user is given a list of all Employees within
+                                the Database to choose from. Each name is either green or orange to indicate
+                                whether that Employee is online or offline. Regardless of status, each 
+                                person within the list can be chosen for a group chat.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide4.png" alt="New Chats">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Storing New Chats</h3>
+                            <p> We stored our messages within a chatLog that had multiple chatLog lists 
+                                within. Each chatLog list contains a conversation that was created by an   
+                                Employee. This way all conversations are saved and accounts with role ADMIN 
+                                have access for later viewing.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_info2.png" alt="Storing New Chats">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Admin Settings</h3>
+                            <p> Employees with role ADMIN have access to a settings tab which gives them 
+                                options such as CREATE, DELETE, and VIEW. This allows the ADMIN to create 
+                                new Employee accounts, delete existing Employee accounts, and view all 
+                                chat messages of other Employees that do not have ADMIN role. 
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide5.png" alt="Admin Settings">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Creating a New User</h3>
+                            <p> This is the UI when an ADMIN creates a new Employee account. They provide
+                                the account name, account password, and decide the role of this Employee.
+                                Once created, this account is stored along other Employee accounts and is 
+                                ready to begin their own conversations.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide6.png" alt="New User">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Multiple Users Online</h3>
+                            <p> Our app allows for multiple users to be online at one time which is only 
+                                possible by our virtual server design. Once the server is online, a ChatService  
+                                thread is created for each client and then they can run their app on their device. 
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_info3.png" alt="Multiple Users">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>View All Chatlogs</h3>
+                            <p> This is the UI when an ADMIN views all chatLogs that do not contain another 
+                                ADMIN within them. They receive a list that contains all conversations along 
+                                with all Employees within that conversation. The ADMIN has access to view all 
+                                of these at any time.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide7.png" alt="View Chatlogs">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>Example</h3>
+                            <p> Here is an example of an ADMIN that is viewing 3 different conversations 
+                                at one time. There are a combination of normal chats and group chats as well,
+                                which ADMIN has access to view.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_slide8.png" alt="Example">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-container2">
+                    <div class="slide">
+                        <div class="content">
+                            <h3>App Overview</h3>
+                            <p> Here is a simplified UML Diagram of how our app functions and how each section 
+                                of the app works in relation to one another. The contrasting color scheme also
+                                shows which Employee has access to which section according to their role.
+                            </p>
+                        </div>
+                        <div class="image">
+                            <img src="assets/images/Project2_info4.png" alt="App Overview">
+                        </div>
+                    </div>
+                </div>
+                <div id="prev2" onclick="prev2()"> ◄ </div>
+                <div id="next2" onclick="next2()"> ► </div>
+                <script>
+                    let slides2 = document.querySelectorAll('.slide-container2');
+                    let index2 = 0;
+                    function next2(){
+                        slides2[index2].classList.remove('active');
+                        index2 = (index2 + 1) % slides2.length;
+                        slides2[index2].classList.add('active');
+                    }
+                    function prev2(){
+                        slides2[index2].classList.remove('active');
+                        index2 = (index2 - 1 + slides2.length) % slides2.length;
+                        slides2[index2].classList.add('active');
+                    }
+                </script>  
+            </div>  
+        </div>
+    </div>
+    </section>
+    <!-- End of projects section -->
+
+
+    <!-- Send a Message section -->
+    <section class="section bg-dark py-2">
+    <div class="section contact" id="contact">
+        <div class="bgImage">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="contact-form-card">
+                            <h4 class="contact-title">Send a message</h4>
+                            <form action="https://formsubmit.co/manuelmiranda820@outlook.com" method="POST">
+                                <input type="text" name="_honey" style="display: none;">
+                                <input type="hidden" name="_captcha" value="false">
+                                <div class="form-group">
+                                    <input  class="form-control" type="text" name="Name" placeholder="Name *" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="email" name="Email" placeholder="Email *" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name ="Message" placeholder="Message *" rows="7" required></textarea>
+                                </div>
+                                <div class="form-group ">
+                                    <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="contact-info-card">
+                            <h4 class="contact-title">Get in touch</h4>
+                            <div class="row mb-2">
+                                <div class="col-1 pt-1 mr-1">
+                                    <i class="ti-mobile icon-md"></i>
+                                </div>
+                                <div class="col-10 ">
+                                    <h6 class="d-inline">Phone : <br> <span class="text-muted">(650) 847-0969</span></h6>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-1 pt-1 mr-1">
+                                    <i class="ti-map-alt icon-md"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h6 class="d-inline">Address :<br> <span class="text-muted">4001 Nicolet Ave Fremont, CA</span></h6>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-1 pt-1 mr-1">
+                                    <i class="ti-envelope icon-md"></i>
+                                </div>
+                                <div class="col-10">
+                                    <h6 class="d-inline">Email :<br> <span class="text-muted">manuelmiranda820@outlook.com</span></h6>
+                                </div>
+                            </div>
+                            <ul class="social-icons pt-4">
+                                <li class="social-item"><a class="social-link text-dark" href="https://www.linkedin.com/in/emanuel-miranda-428898207"><i class="ti-linkedin" aria-hidden="true"></i></a></li> 
+                                <li class="social-item"><a class="social-link text-dark" href="https://github.com/Manny820"><i class="ti-github" aria-hidden="true"></i></a></li>
+                                <li class="social-item"><a class="social-link text-dark" href="https://www.instagram.com/mannyyy_98/"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- End of send a message section -->
+
+
+    <footer class="footer py-3">
+        <div class="container">
+            <center><p class="small mb-0 text-light"> Thanks for stopping by! </p>
+        </div>
+    </footer>
+
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope  -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    
+    <!-- Google mpas -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtme10pzgKSPeJVJrG1O3tjR6lk98o4w8&callback=initMap"></script>
+
+    <!-- emiranda js -->
+    <script src="assets/js/emiranda.js"></script>
+</body>
+</html>
