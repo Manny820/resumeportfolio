@@ -208,13 +208,13 @@ img {
 .wrapper {
   margin: 10px auto;
   display: flex;
-  width: 1200px;
+  width: 1000px;
 }
 
 .text-box {
   color: #fff;
   flex: 1;
-  padding: 30px;
+  padding: 10px;
 }
 
 .text-box img {
@@ -229,12 +229,12 @@ img {
   margin-top: 15px;
   color: #fff;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .text-box p {
   color: #fff;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 svg {
@@ -11172,7 +11172,7 @@ p {
 .projects .slide-container0 .slide .video-wrapper{
   border: 5px solid #000;
   border-radius: 20px;
-  min-width: 370px;
+  min-width: 350px;
   width: 60%;
   height: 60%;
   position: relative;
@@ -11946,7 +11946,7 @@ pre .code {
 
 .contact {
   position: relative;
-  min-height: 600px;
+  min-height: 500px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12013,10 +12013,12 @@ pre .code {
 }
 
 .contact .bgImage {
-  position: absolute;
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("assets/images/photo_1.jpg");
+  background-image: url("/assets/images/photo_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -12025,28 +12027,28 @@ pre .code {
 
 @keyframes bgChange{
   0% {
-    background-image: url("assets/images/photo_1.jpg");
+    background-image: url("/assets/images/photo_1.jpg");
   }
   20% {
-    background-image: url("assets/images/photo_1.jpg");
+    background-image: url("/assets/images/photo_1.jpg");
   }
   25% {
-    background-image: url("assets/images/photo_2.jpg");
+    background-image: url("/assets/images/photo_2.jpg");
   }
   45% {
-    background-image: url("assets/images/photo_2.jpg");
+    background-image: url("/assets/images/photo_2.jpg");
   }
   50% {
-    background-image: url("assets/images/photo_3.jpg");
+    background-image: url("/assets/images/photo_3.jpg");
   }
   70% {
-    background-image: url("assets/images/photo_3.jpg");
+    background-image: url("/assets/images/photo_3.jpg");
   }
   75% {
-    background-image: url("assets/images/photo_4.jpg");
+    background-image: url("/assets/images/photo_4.jpg");
   }
   95% {
-    background-image: url("assets/images/photo_4.jpg");
+    background-image: url("/assets/images/photo_4.jpg");
   }
 }
 
