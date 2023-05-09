@@ -205,6 +205,7 @@ img {
   background-color: #343a40 !important;
 }
 
+
 .wrapper {
   margin: 10px auto;
   display: flex;
@@ -11830,8 +11831,6 @@ pre .code {
   position: relative;
   height: 80vh;
   min-height: 600px;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/images/header.jpeg");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/images/header.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11964,7 +11963,7 @@ pre .code {
 
 @media (max-width: 991.98px) {
   .contact {
-    padding: 300px 0 0;
+    padding: 20px 0 0;
   }
   .contact .contact-form-card {
     border-bottom: 1px solid #dee2e6;
@@ -11992,6 +11991,7 @@ pre .code {
   padding: 35px;
   background: #fff;
   min-height: 500px;
+
 }
 
 
@@ -12018,7 +12018,6 @@ pre .code {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/assets/images/photo_1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
