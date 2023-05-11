@@ -12026,28 +12026,28 @@ pre .code {
 
 @keyframes bgChange{
   0% {
-    background-image: url("/assets/images/photo_1.jpg");
+    background-image: url("/assets/images/photo_1.png");
   }
   20% {
-    background-image: url("/assets/images/photo_1.jpg");
+    background-image: url("/assets/images/photo_1.png");
   }
   25% {
-    background-image: url("/assets/images/photo_2.jpg");
+    background-image: url("/assets/images/photo_2.png");
   }
   45% {
-    background-image: url("/assets/images/photo_2.jpg");
+    background-image: url("/assets/images/photo_2.png");
   }
   50% {
-    background-image: url("/assets/images/photo_3.jpg");
+    background-image: url("/assets/images/photo_3.png");
   }
   70% {
-    background-image: url("/assets/images/photo_3.jpg");
+    background-image: url("/assets/images/photo_3.png");
   }
   75% {
-    background-image: url("/assets/images/photo_4.jpg");
+    background-image: url("/assets/images/photo_4.png");
   }
   95% {
-    background-image: url("/assets/images/photo_4.jpg");
+    background-image: url("/assets/images/photo_4.png");
   }
 }
 
