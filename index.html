@@ -471,8 +471,6 @@
     <section class="section bg-custom-gray" id="projects">
         <div class="container">
             <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Projects</h2>
-            
-
             <div class="projects">
                 <div class="project-name0">
                     <h4>Two Player Game</h4>
@@ -489,9 +487,7 @@
                                 <br> <br>Click to see my Source code! 
                             </p>
                                 <a href="https://github.com/Manny820/Two-Player-Game" class="btn btn-outline-danger">SRC Code</a>
-
                         </div>
-
                         <div class="video-wrapper">
                             <video width="100%" height="100%" playsinline autoplay muted loop poster="menu.jpg">
                               <source src="assets/videos/menu.mp4" type="video/mp4">
@@ -582,7 +578,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div id="prev0" onclick="prev0()"> ◄ </div>
                 <div id="next0" onclick="next0()"> ► </div>
                 <script>
@@ -600,9 +595,6 @@
                     }
                 </script>  
             </div>  
-
-            
-            
             <div class="projects">
                 <div class="project-name">
                     <h4>Expense Tracking App</h4>
@@ -621,7 +613,6 @@
                                 <br> <br>Click to see my Source code! 
                             </p>
                                 <a href="https://github.com/Manny820/Expense-Tracking-App" class="btn btn-outline-danger">SRC Code</a>
-
                         </div>
                         <div class="image">
                             <img src="assets/images/Project1_slide1.png" alt="Home Page">
@@ -665,7 +656,6 @@
                                 that hold their specified lists and the app dynamically adds each 
                                 transaction to their category along with the Home Page. Buttons in 
                                 Action Bar allow user to go to Home Page (LEFT) or to Add a Transaction (Right)
-
                             </p>
                         </div>
                         <div class="image">
@@ -755,9 +745,6 @@
                     }
                 </script>  
             </div>  
-
-
-
             <div class="projects">
                 <div class="project-name2">
                     <h4>Communications App</h4>
@@ -772,7 +759,6 @@
                                 final. This app allows Employees to communicate with each other through 
                                 virtual servers that our team created. This is the Login Page.
                                 <br> <br>Click to see our Source code! 
-
                             </p>
                             <a href="https://github.com/Manny820/Software-Engineering-Final" class="btn btn-outline-danger">SRC Code</a>
                         </div>
@@ -811,7 +797,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="slide-container2">
                     <div class="slide">
                         <div class="content">
@@ -970,8 +955,47 @@
     <section class="section bg-dark py-3">
     <div class="section contact" id="contact">
         <div class="bgImage">
-            <div class="overlay">
-                <img src="assets/images/photo_3.jpeg">
+            <div id="scroll-image" class="overlay">
+                <img src="assets/images/photo_1.jpeg" class="test">
+                <img src="assets/images/photo_2.jpeg" class="test">
+                <img src="assets/images/photo_3.jpeg" class="test">
+                <img src="assets/images/photo_4.jpeg" class="test">
+                <script>
+                    startImageTransition();
+                    function startImageTransition() {
+                        var images = document.getElementsByClassName("test");
+                        for (var i = 0; i < images.length; ++i) {
+                            images[i].style.opacity = 1;
+                        }
+                        var top = 1;
+                        var cur = images.length - 1;
+                        setInterval(changeImage, 10000);
+                        async function changeImage() {
+                            var nextImage = (1 + cur) % images.length;
+                            images[cur].style.zIndex = top + 1;
+                            images[nextImage].style.zIndex = top;
+                            await transition();
+                            images[cur].style.zIndex = top;
+                            images[nextImage].style.zIndex = top + 1;
+                            top = top + 1;
+                            images[cur].style.opacity = 1;
+                            cur = nextImage;
+                        }
+                        function transition() {
+                            return new Promise(function(resolve, reject) {
+                                var del = 0.01;
+                                var id = setInterval(changeOpacity, 10);
+                                function changeOpacity() {
+                                    images[cur].style.opacity -= del;
+                                    if (images[cur].style.opacity <= 0) {
+                                        clearInterval(id);
+                                        resolve();
+                                    }
+                                }
+                            })
+                        }
+                    }
+                </script>
             </div>
             <div class="container">
                 <div class="row">
